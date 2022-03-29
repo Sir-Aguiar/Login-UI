@@ -9,5 +9,40 @@
   @apply absolute right-1 top-1 cursor-pointer text-slate-200 transition-all;
 }
 .mainFormulary {
-  @apply w-[93%] h-[90%] md:w-[85%] rounded-[4px] lg:w-[55%] xlg:w-[40%] shadow-l-form dark:shadow-d-form
+  @apply flex flex-col p-2 w-[93%] h-[90%] md:w-[85%] lg:w-[50%] xlg:w-[35%]  bg-l-form-bg dark:bg-d-form-bg rounded-[4px] shadow-l-form dark:shadow-d-form;
+}
+.submitArea {
+  @apply p-1 w-full flex flex-col justify-center items-center;
+}
+.submitArea button {
+  @apply p-2 text-d-secundary-text text-lg w-[90%] md:w-[80%] lg:w-[70%] bg-l-formulary-color dark:bg-d-formulary-color rounded-lg;
+}
+.inputField {
+  @apply flex flex-col p-1 text-lg my-2 relative;
+}
+
+.wrapper:hover span {
+  @apply scale-100 
+}
+
+.professorModule, .studentModule{
+  @apply h-[122px] w-[122px] rounded-full  bg-center bg-cover bg-no-repeat
+}
+.professorModule {
+  @apply bg-professor
+}
+.studentModule {
+  @apply bg-student
+}
+.userType {
+  @apply flex items-center justify-around my-8;
+}
+.wrapper {
+  @apply bg-gradient-to-tr from-indigo-600 to-rose-600 w-32 h-32 rounded-full relative flex justify-center items-center cursor-pointer ;
+} 
+.wrapperCaption {
+  @apply absolute top-full left-1/2 -translate-x-1/2 scale-0 transition-all duration-300 ease-out origin-top text-lg;
+}
+.inputField input {
+  @apply p-1 bg-transparent border-b-2 border-indigo-500 dark:border-indigo-500 rounded-md outline-none;
 }
