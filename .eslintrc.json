@@ -36,6 +36,15 @@
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "getter-return":"error",
+        "no-undefined":"error",
+        "no-unused-vars":"error",
+        "arrow-body-style":"error",
+        "curly":"error",
+        "no-else-return":"error",
+        "no-redeclare":"error",
+        "no-regex-spaces":"error",
+        
     }
 }

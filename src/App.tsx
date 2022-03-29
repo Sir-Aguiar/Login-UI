@@ -1,38 +1,29 @@
-import React, { useState } from "react";
-import "./App.css";
-
-function App() {
-  const [count, setCount] = useState(0);
-
+import React, { useEffect, useState } from "react";
+import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
+import "./styles/App.css"
+const App: React.FC = () => {
+  const [darkMode, setDark] = useState(false);
+  useEffect(() => {
+    const body = document.getElementById("body") as HTMLBodyElement;
+    if (darkMode) {
+      body.classList.add("dark");
+    } else {
+      body.classList.remove("dark");
+    }
+  }, [darkMode]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="mainLoginContainer">
+      <span
+        className="theme"
+        onClick={() => {
+          setDark(!darkMode);
+        }}
+      >
+        {darkMode ? <BsFillSunFill /> : <BsFillMoonFill />}
+      </span>
+      <form className="mainFormulary"></form>
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+.mainLoginContainer {
+  @apply dark:bg-d-bg bg-l-bg h-full w-full;
+}
+.theme {
+  @apply absolute right-1 top-1 cursor-pointer text-slate-200 transition-all;
+}
