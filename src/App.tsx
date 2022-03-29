@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { BsFillSunFill, BsFillMoonFill } from "react-icons/bs";
-import "./styles/App.css"
+import "./styles/App.css";
 const App: React.FC = () => {
   const [darkMode, setDark] = useState(false);
   useEffect(() => {
     const body = document.getElementById("body") as HTMLBodyElement;
     if (darkMode) {
-      body.classList.add("dark");
-    } else {
-      body.classList.remove("dark");
+      return body.classList.add("dark");
     }
+    return body.classList.remove("dark");
   }, [darkMode]);
   return (
     <div className="mainLoginContainer">
@@ -27,3 +26,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

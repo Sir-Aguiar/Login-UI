@@ -44,7 +44,7 @@
         "curly":"error",
         "no-else-return":"error",
         "no-redeclare":"error",
-        "no-regex-spaces":"error",
+        "no-regex-spaces":"error"
         
     }
 }
