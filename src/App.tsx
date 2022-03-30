@@ -22,16 +22,7 @@ const App: React.FC = () => {
         {darkMode ? <BsFillSunFill /> : <BsFillMoonFill />}
       </span>
       <form className="mainFormulary">
-        <div className="userType">
-          <div className="studentWrapper wrapper">
-            <div className="studentModule bg-student"></div>
-            <span className="wrapperCaption">Professor</span>
-          </div>
-          <div className="professorWrapper wrapper">
-            <div className="professorModule "></div>
-            <span className="wrapperCaption">Aluno</span>
-          </div>
-        </div>
+        <div className="formHeader"></div>
         <div className="username inputField">
           <input type="text" name="username" id="username" placeholder="Usuário" />
         </div>
@@ -39,6 +30,14 @@ const App: React.FC = () => {
           <input type="password" name="password" id="password" placeholder="Senha" />
         </div>
         <div className="submitArea">
+          <div className="remember">
+            <input type="checkbox" name="remember" id="remember" />
+            <label htmlFor="remember">Lembrar de mim</label>
+          </div>
+          <div className="extras">
+            <a href="#">Não possui uma conta?</a>
+            <a href="#">Esqueceu a senha? </a>
+          </div>
           <button type="submit">Entrar</button>
         </div>
       </form>
